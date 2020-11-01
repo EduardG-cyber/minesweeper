@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  height: 80px;
+}
+
+.victory {
+  color: #158467;
+}
+
+.defeat {
+  color: #cd0a0a;
+}
+
+.game-board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  height: 600px;
+}
+
+.square {
+  background: grey;
+  height: 60px;
+  width: 60px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  transition: transform 0.1s ease-in;
+}
+
+.square:hover {
+  transform: scale(0.95);
+}
+
+.checked {
+  background: #ccc;
+}
+
+.bomb {
+  background: #000;
+}
+
+div[neighbors="1"] {
+  color: #158467;
+}
+
+div[neighbors="2"] {
+  color: #ea5455;
+}
+
+div[neighbors="3"] {
+  color: #52575d;
+}
+
+div[neighbors="4"] {
+  color: #7d0633;
+}
+
+div[neighbors="5"] {
+  color: #31112c;
+}
+
+div[neighbors="6"] {
+  color: #4e89ae;
+}
+
+div[neighbors="7"] {
+  color: #0f3460;
+}
+div[neighbors="8"] {
+  color: #cd0a0a;
+}
+
+.bombs-amount {
+  position: absolute;
+  left: 200px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-bottom: 3px solid grey;
+  border-left: 3px solid grey;
+  padding: 5px 20px;
+  color: grey;
+}
+
+.game-buttons-container {
+  position: absolute;
+  right: 400px;
+  bottom: 300px;
+}
+
+.level-buttons-container {
+  position: absolute;
+  right: 120px;
+  top: 150px;
+  display: flex;
+}
+
+.btn {
+  padding: 5px 25px;
+  background: #43658b;
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 5px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s linear;
+}
+.btn:hover {
+  transform: scale(0.96);
+}
+
+.easy {
+  background: #81b214;
+}
+
+.medium {
+  background: #fddb3a;
+}
+
+.hard {
+  background: #cd0a0a;
+}
+
+.square--easy {
+  height: calc(600px / 10);
+  width: calc(600px / 10);
+}
+
+.square--medium {
+  height: calc(600px / 15);
+  width: calc(600px / 15);
+}
+
+.square--hard {
+  height: calc(600px / 20);
+  width: calc(600px / 20);
+}
+
+.flag::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f024";
+  background:
+}
